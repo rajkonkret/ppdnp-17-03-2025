@@ -29,9 +29,10 @@ https://play.google.com/store/apps/details?id=pl.rajkonkret.testjava2&hl=pl&gl=U
 %o: formatowanie liczb w formacie ósemkowym
 %c: formatowanie pojedynczych znaków
 
-%s - łańcuch znaków (string)
-%r - reprezentacja obiektu (repr)
 %d - liczba całkowita (integer)
+%s - łańcuch znaków (string)
+%f - liczba zmiennoprzecinkowa (float)
+%r - reprezentacja obiektu (repr)
 %i - liczba całkowita (integer)
 %o - liczba w formacie ósemkowym (octal)
 %u - liczba całkowita bez znaku (unsigned decimal)
@@ -39,7 +40,6 @@ https://play.google.com/store/apps/details?id=pl.rajkonkret.testjava2&hl=pl&gl=U
 %X - liczba w formacie szesnastkowym (hexadecimal) z wielkimi literami
 %e - liczba w notacji naukowej (exponential)
 %E - liczba w notacji naukowej (exponential) z wielkimi literami
-%f - liczba zmiennoprzecinkowa (float)
 %F - liczba zmiennoprzecinkowa (float)
 %g - liczba zmiennoprzecinkowa (float) w formacie kompaktowym
 %G - liczba zmiennoprzecinkowa (float) w formacie kompaktowym z wielkimi literami
