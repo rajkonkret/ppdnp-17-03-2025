@@ -118,3 +118,4 @@ spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
 https://github.com/rajkonkret/ppdnp-17-03-2025
 python.org
+https://peps.python.org/pep-0008/
