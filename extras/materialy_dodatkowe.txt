@@ -48,8 +48,8 @@ https://play.google.com/store/apps/details?id=pl.rajkonkret.testjava2&hl=pl&gl=U
 %% - znak % (percent)
 
 \n - Nowa linia
-\r - Powrót karetki
 \t - Tabulacja pozioma
+\r - Powrót karetki
 \b - Powrót kursora (usuwa poprzedni znak)
 \f - Przesunięcie strony
 \v - Tabulacja pionowa
