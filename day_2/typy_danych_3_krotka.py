@@ -26,3 +26,39 @@ print(type(tupla))  # <class 'tuple'>
 tupla = 43,
 print(tupla)  # (43,)
 print(type(tupla))  # <class 'tuple'>
+
+# tupla jest niemutowalna
+# tupla_liczby[3] = 134  # TypeError: 'tuple' object does not support item assignment
+
+# usunięcie tupli
+del tupla_liczby
+# print(tupla_liczby) # NameError: name 'tupla_liczby' is not defined
+
+print(tupla_imiona.index("Radek"))  # indeks 0
+print(tupla_imiona.count("Radek"))  # występuje 1 raz
+# rozpakowanie tupli
+tup = 1, 2
+print(type(tup))  # <class 'tuple'>
+
+a, b = 1, 2
+print(a, b)
+
+a, b = tup
+print(f"{a=}, {b=}")  # a=1, b=2
+
+tup_2 = 1, 2, 3
+
+# a, b = tup_2
+a, *b = tup_2
+print(f"{a=}, {b=}")
+# a=1, b=[2, 3]
+
+print(tupla_imiona)
+# imie1, imie2, imie3
+# * worek na pozostałe dane
+imie1, *imie2, imie3 = tupla_imiona
+print(f"{imie1}, {imie2}, {imie3}")
+# Radek, ['Tomek', 'Zenek', 'Mateusz', 'Sylwia', 'Zbyszek'], Donald
+*imie1, imie2, imie3 = tupla_imiona
+print(f"{imie1}, {imie2}, {imie3}")
+# ['Radek', 'Tomek', 'Zenek', 'Mateusz', 'Sylwia'], Zbyszek, Donald
