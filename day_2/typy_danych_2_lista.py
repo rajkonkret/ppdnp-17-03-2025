@@ -55,7 +55,51 @@ print(lista[10:27])  # []
 # ['Radek', 'Tomek', 'Zenek', 'Anna', 'Wojtek']
 #     0         1       2        3        4 indeksy
 #     -5        -4      -3       -2       -1
-print(lista[-2:0]) # [3:0] -> []
-print(lista[0:-2]) # [0:3] -> ['Radek', 'Tomek', 'Zenek']
+print(lista[-2:0])  # [3:0] -> []
+print(lista[0:-2])  # [0:3] -> ['Radek', 'Tomek', 'Zenek']
 
+lista_15 = list(range(15))  # generuje liczbu od 0 do 14
+print(lista_15)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+# co druga liczbę wyświetlić
+print(lista_15[0:15:2])  # [start:stop:krok]
+# [0, 2, 4, 6, 8, 10, 12, 14]
+print(list(range(0, 15, 2)))  # (start, stop, krok), [0, 2, 4, 6, 8, 10, 12, 14]
+print(lista[::2])  # ['Radek', 'Zenek', 'Wojtek']
+print(lista_15[::2])  # [0, 2, 4, 6, 8, 10, 12, 14]
 
+# wypisanie w odwrotnej kolejnosci
+print(lista[::-1])  # ['Wojtek', 'Anna', 'Zenek', 'Tomek', 'Radek']
+print(lista_15[::-1])  # [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+# nadpisanie elementu w liście na wskazanym indeksie
+lista[3] = "Marek"
+print(lista)  # ['Radek', 'Tomek', 'Zenek', 'Marek', 'Wojtek']
+
+# wstawienie elementu do listy na wskazany indeks
+lista.insert(1, "Krzysztof")
+print(lista)  # ['Radek', 'Krzysztof', 'Tomek', 'Zenek', 'Marek', 'Wojtek']
+
+lista.insert(15, "Kasia")
+print(lista)
+# ['Radek', 'Krzysztof', 'Tomek', 'Zenek', 'Marek', 'Wojtek', 'Kasia']
+
+# sprawdzenie na którym indeksie jest dany element
+print(lista.index("Kasia"))  # 6
+print(lista.index("Krzysztof"))  # 1
+lista.append("Tomek")
+print(lista)
+# ['Radek', 'Krzysztof', 'Tomek', 'Zenek', 'Marek', 'Wojtek', 'Kasia', 'Tomek']
+print(lista.index("Tomek"))  # indeks 2, pierwsze wystąpienie
+
+# usunięcie elementu
+lista.remove("Marek")
+print(lista)
+# ['Radek', 'Krzysztof', 'Tomek', 'Zenek', 'Wojtek', 'Kasia', 'Tomek']
+
+# pop() - usunięcie po indeksie
+print(lista.pop(6))  # Tomek, zwraca co usunął celem weryfikacji
+print(lista)
+# ['Radek', 'Krzysztof', 'Tomek', 'Zenek', 'Wojtek', 'Kasia']
+print(lista.pop(-3))  # Zenek
+print(lista.pop())  # usunie ostatni element Kasia
+print(lista)  # ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
