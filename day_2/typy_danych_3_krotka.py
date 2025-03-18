@@ -59,6 +59,18 @@ print(tupla_imiona)
 imie1, *imie2, imie3 = tupla_imiona
 print(f"{imie1}, {imie2}, {imie3}")
 # Radek, ['Tomek', 'Zenek', 'Mateusz', 'Sylwia', 'Zbyszek'], Donald
+
 *imie1, imie2, imie3 = tupla_imiona
 print(f"{imie1}, {imie2}, {imie3}")
 # ['Radek', 'Tomek', 'Zenek', 'Mateusz', 'Sylwia'], Zbyszek, Donald
+
+imie1, imie2, *imie3 = tupla_imiona
+print(f"{imie1}, {imie2}, {imie3}")
+# Radek, Tomek, ['Zenek', 'Mateusz', 'Sylwia', 'Zbyszek', 'Donald']
+
+# sortowanie krotki zwraca listę
+print(sorted(tupla_imiona))
+# ['Donald', 'Mateusz', 'Radek', 'Sylwia', 'Tomek', 'Zbyszek', 'Zenek']
+print(tupla_imiona)
+# krotka zostaje nieposortowana
+# ('Radek', 'Tomek', 'Zenek', 'Mateusz', 'Sylwia', 'Zbyszek', 'Donald')
