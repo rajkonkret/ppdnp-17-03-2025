@@ -107,3 +107,4 @@ print(f"Porównanie {a} <= {b} = {a <= b}")  # Porównanie 8 <= 6 = False
 print(f"Porównanie {a} >= {b} = {a >= b}")  # Porównanie 8 >= 6 = True
 print(f"Porównanie {a} == {b} = {a == b}")  # == porównanie, Porównanie 8 == 6 = False
 print(f"Porównanie {a} != {b} = {a != b}")  # != rózne, Porównanie 8 != 6 = True
+# typy prymitywne
