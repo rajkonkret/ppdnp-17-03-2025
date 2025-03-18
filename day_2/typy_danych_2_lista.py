@@ -103,3 +103,64 @@ print(lista)
 print(lista.pop(-3))  # Zenek
 print(lista.pop())  # usunie ostatni element Kasia
 print(lista)  # ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
+
+a = 1
+b = 3
+a = b
+print(f"{a=}, {b=}")  # a=3, b=3
+b = 9
+print(f"{a=}, {b=}")  # a=3, b=9
+
+lista_2 = lista  # a = b, kopia referencji, kopia adresu
+lista_copy = lista.copy()  # kopia elemntów listy w nowej liście
+print(lista_2)
+print(lista)
+print(lista_copy)
+# ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
+# ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
+lista.clear()  # usunięcie elementów z listy
+print(lista)  # []
+print(lista_2)  # []
+print(lista_copy)  # ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
+print(id(lista))  # 2879406842496
+print(id(lista_2))  # 2879406842496
+print(id(lista_copy))  # 2879411470080
+
+liczby = [54, 999, 34, 22, 12.34, 567]
+print(liczby)  # [54, 999, 34, 22, 12.34, 567]
+print(type(liczby))  # <class 'list'>
+liczby.sort()
+print(liczby)  ## [12.34, 22, 34, 54, 567, 999]
+
+liczby = [54, 999, 34, 22, 12.34, 567, "A"]
+print(type(liczby))  # <class 'list'>
+# liczby.sort() # TypeError: '<' not supported between instances of 'str' and 'int'
+
+print(lista_copy)  # ['Radek', 'Krzysztof', 'Tomek', 'Wojtek']
+lista_copy.sort()
+print(lista_copy)  # ['Krzysztof', 'Radek', 'Tomek', 'Wojtek']
+
+lista_copy.sort(reverse=True)  # sortowanie z odwróceniem
+print(lista_copy)  # ['Wojtek', 'Tomek', 'Radek', 'Krzysztof']
+
+lista_copy.reverse()  # odwrócenie listy bez sortowanie
+# ['Wojtek', 'Tomek', 'Radek', 'Krzysztof']
+
+liczby[3] = 666
+print(liczby[0:3])
+print(liczby[-2])
+print(liczby)  # [54, 999, 34, 666, 12.34, 567, 'A']
+
+tekst = "Pyth on."
+lista1 = list(tekst)
+# rozpakowanie sekwencji
+print(lista1)  # ['P', 'y', 't', 'h', ' ', 'o', 'n', '.']
+print(len(lista1))  # 8
+
+lista2 = [tekst]
+print(lista2)  # ['Pyth on.']
+print(len(lista2))  # 1
+
+krotka = tuple(lista_copy)
+print(type(krotka))  # <class 'tuple'>
+print(krotka)  # ('Krzysztof', 'Radek', 'Tomek', 'Wojtek')
