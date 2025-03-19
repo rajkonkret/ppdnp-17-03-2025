@@ -35,6 +35,7 @@ with open("test.log", "a", encoding="utf-8") as fh:
     fh.write("Kolejne\n")
     fh.write("Jescze jedno\n")
     fh.write("Dośdane\n")
+    fh.write("Dośdążćane\n")
 
 with open("test.log", "r", encoding="utf-8") as fh:
     lines = fh.read()
