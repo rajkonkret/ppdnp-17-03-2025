@@ -1,6 +1,7 @@
 # pętle - możłiwość wykonania wielkrotenie tego samego fragmentu kodu
 # for - iteracyjna
 import random
+from itertools import zip_longest
 
 for i in range(5):  # od 0 do 4
     print(i)
@@ -114,6 +115,7 @@ for p in imiona:
 for p in enumerate(imiona):
     print(p)  # (3, 'Ania') -> 3 Ania
 
+# i, o = p
 for i, o in enumerate(imiona):
     print(i, o)
 # 0 Radek
@@ -126,3 +128,113 @@ for i, o in enumerate(imiona, start=1):
 # 2 Tomek
 # 3 Zenek
 # 4 Ania
+
+imiona = ["Radek", "Tomek", "Zenek", "Ania"]
+wiek = [44, 55, 32, 27]
+
+# Radek 44
+for p in imiona:
+    print(p, wiek[imiona.index(p)])
+# Radek 44
+# Tomek 55
+# Zenek 32
+# Ania 27
+
+imiona = ["Radek", "Tomek", "Zenek", "Ania", "Sylwia"]
+wiek = [44, 55, 32, 27]
+
+# for p in imiona:
+#     print(p, wiek[imiona.index(p)]) # IndexError: list index out of range
+
+# zip() - łączy kolekcje
+for i in zip(imiona, wiek):
+    print(i)
+    # ('Radek', 44)
+    # ('Tomek', 55)
+    # ('Zenek', 32)
+    # ('Ania', 27)
+
+for i, w in zip(imiona, wiek):
+    print(i, w)
+# Radek 44
+# Tomek 55
+# Zenek 32
+# Ania 27
+
+# 0 Radek 44
+
+for i in enumerate(zip(imiona, wiek)):
+    print(i)
+
+    # (0, ('Radek', 44))
+    # (1, ('Tomek', 55))
+    # (2, ('Zenek', 32))
+    # (3, ('Ania', 27))
+a, b = (0, ('Radek', 44))
+print(a, b)  # 0 ('Radek', 44)
+c, d = ('Radek', 44)
+print(a, c, d)  # 0 Radek 44
+a, (c, d) = (0, ('Radek', 44))
+print(a, c, d)  # 0 Radek 44
+
+for i, (o, w) in enumerate(zip(imiona, wiek)):
+    print(i, o, w)
+# 0 Radek 44
+# 1 Tomek 55
+# 2 Zenek 32
+# 3 Ania 27
+
+imiona = ["Radek", "Tomek", "Zenek", "Ania", "Sylwia"]
+wiek = [44, 55, 32, 27]
+
+zipped = zip_longest(imiona, wiek, fillvalue=None)
+print(zipped)  # <itertools.zip_longest object at 0x0000023595E9DF30>
+# iterator
+print(5 * "-")
+for i in zipped:
+    print(i)
+# -----
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Sylwia', None)
+# -----
+print((5 * "-"))
+for i in zipped:
+    print(i)
+print((5 * "-"))
+# iterator mozemy uzyc raz
+zipped = zip_longest(imiona, wiek, fillvalue=None)
+print(zipped)
+zip_list = list(zipped)
+print((5 * "-"))
+for i in zip_list:
+    print(i)
+print((5 * "-"))
+for i in zip_list:
+    print(i)
+print((5 * "-"))
+# <itertools.zip_longest object at 0x00000260A128F790>
+# -----
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Sylwia', None)
+# -----
+# -----
+# <itertools.zip_longest object at 0x00000260A135AF70>
+# -----
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Sylwia', None)
+# -----
+# ('Radek', 44)
+# ('Tomek', 55)
+# ('Zenek', 32)
+# ('Ania', 27)
+# ('Sylwia', None)
+# -----
