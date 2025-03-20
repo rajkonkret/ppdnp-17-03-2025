@@ -11,13 +11,13 @@ row = ['radek', 'coe', "3", 0]
 dict = dict(zip(fields, row))
 
 # newline="" ominięcie problemu pustych lini
-filename = 'records.csv'
+filename = '../dane/records.csv'
 with open(filename, "w", newline="") as csv_f:
     csvwriter = csv.writer(csv_f)
     csvwriter.writerow(fields)
     csvwriter.writerow(row)
 
-filename = "records_dict.csv"
+filename = "../dane/records_dict.csv"
 with open(filename, "w", newline="") as f:
     csvwriter = csv.DictWriter(f, fieldnames=fields)
     csvwriter.writeheader()
@@ -31,7 +31,7 @@ products = [
     {"sku": 5, "exp_date": "today", "price": 10.00},
 ]
 
-filename = "records_discount.csv"
+filename = "../dane/records_discount.csv"
 list_product = [key for key in products[0]]
 
 with open(filename, "w", newline="") as fh:
