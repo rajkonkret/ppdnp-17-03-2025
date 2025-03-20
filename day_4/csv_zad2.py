@@ -1,7 +1,7 @@
 import csv
-
-filename = '../dane/records.csv'
-# filename = '../dane/records_discount.csv'
+from pprint import pprint
+# filename = '../dane/records.csv'
+filename = '../dane/records_discount.csv'
 
 fields = []
 rows = []
@@ -31,3 +31,9 @@ print(rows)
 # [['1;today;100'], ['2;today;200'], ['3;tomorrow;50'], ['4;today;78'], ['5;today;10.0']]
 # ['sku', 'exp_date', 'price']
 # [['1', 'today', '100'], ['2', 'today', '200'], ['3', 'tomorrow', '50'], ['4', 'today', '78'], ['5', 'today', '10.0']]
+pprint(rows)
+# [['1', 'today', '100'],
+#  ['2', 'today', '200'],
+#  ['3', 'tomorrow', '50'],
+#  ['4', 'today', '78'],
+#  ['5', 'today', '10.0']]
