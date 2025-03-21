@@ -56,7 +56,7 @@ print(cz1.plec)
 # 50
 # m
 
-# drugiczłowiek odmiennej płci
+# drugi człowiek odmiennej płci
 cz2 = Human()
 cz2.imie = "Anna"
 cz2.wiek = 34
