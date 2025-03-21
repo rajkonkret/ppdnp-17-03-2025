@@ -16,9 +16,14 @@ try:
     salary REAL NOT NULL);
     """
 
-    # uruchamianie query
-    cursor.execute(query)
-    sql_connection.commit()  # zatwierdzenei zmian
+    # # uruchamianie query
+    # cursor.execute(query)
+    # sql_connection.commit()  # zatwierdzenei zmian
+
+    with open('tables.sql', "r") as file:
+        sql_script = file.read()
+
+    cursor.executescript(sql_script)  # wykonanie skryptu
 
 except sqlite3.Error as e:
     print("Bład otwierania bazy danych", e)
