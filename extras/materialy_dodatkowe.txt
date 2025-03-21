@@ -123,3 +123,4 @@ https://peps.python.org/pep-0008/
 https://www.hackerrank.com/domains/python
 https://www.w3schools.com/python/python_syntax.asp
 https://pl.altapps.net/soft/hackerrank-com?page=2
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
